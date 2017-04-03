@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>WEBSITE TITLE</title>
-  </head>
-  <body>
-    <header>
-      <div class="mainlogo"></div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></
-            li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-
+<?php get_header(); ?>  
+    <main class="blog">
+      <?php if( have_posts() ){
+          while( have_posts() ){ 
+            the_post(); ?>
+      <article>
+        <img src="http://placecorgi.com/550/320" />
+        <h3><?php the_title(); ?></h3>
+        <div><?php the_date(); ?></div>
+        <?php the_excerpt(); ?>
+        <a href="<?php the_permalink(); ?>">Continue Reading</a>
+      </article>
+      <?php } //end while
+    } //end if ?>
     </main>
-    <footer>
-
-    </footer>
-  </body>
-</html>
+<?php
+  get_sidebar();
+  get_footer();
+?>

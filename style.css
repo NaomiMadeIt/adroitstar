@@ -8,3 +8,56 @@ Tags: blue, white, star
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.html
 */
+html {
+  background-color: mistyrose;
+}
+body {
+  background-color: white;
+  width: 960px;
+  margin: 0 auto;
+}
+.blog {
+  float: left;
+  width: 630px;
+}
+article {
+  background-color: cornflowerblue;
+  padding: 20px;
+  margin: 0 20px 20px;
+}
+aside {
+  float: left;
+  width: 300px;
+}
+aside div {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  background-color: lightblue;
+}
+a.socialmediabutton {
+  display: block;
+  background-color: blue;
+  color: white;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 20px;
+}
+footer {
+  width: 960px;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
